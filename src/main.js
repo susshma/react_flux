@@ -1,4 +1,11 @@
 $ = jQuery = require('jQuery');
-var App = console.log("test app");
+var React = require('react');
+var Router = require('react-router');
+var routes = require('./routes');
+var Home = require('./components/homePage');
+var About = require('./components/about/about');
+var Authors = require('./components/author/authorPage');
 
-module.exports = App;
+Router.run(routes, function(Handler){
+  React.render(<Handler />, document.getElementById('app'));
+});
