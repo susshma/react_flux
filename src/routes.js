@@ -7,9 +7,9 @@ var DefaultRoute = Router.DefaultRoute;
 var Route = Router.Route;
 
 var routes = (
-  <Route name="app" paht="/" handler={require('./app')}>
+  <Route name="app" path="/" handler={require('./app')}>
     <DefaultRoute name="homepage" handler={require('./components/homePage')} />
-    <Route name="authors" path="/#authors" handler={require('./components/author/authorPage')} />
+    <Route name="authors" path="/authors" handler={require('./components/author/authorPage')} />
   </Route>
 )
 
